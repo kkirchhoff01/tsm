@@ -19,6 +19,9 @@ import sqlite3
 # Configuration file
 import config
 
+# Options obtained from config.py
+options = config.options
+
 
 class Ticker(object):
     def __init__(self, name):
@@ -107,10 +110,6 @@ class Portfolio(object):
         self._conn.commit()
         self._curr.close()
         self._conn.close()
-
-
-# Options obtained from config.py
-options = config.options
 
 
 class Monitor:
